@@ -1,36 +1,33 @@
-const inputEl = document.getElementById("input-el")
+const inputField = document.getElementById("inputField")
 const buttonEl = document.getElementById("button-el")
 const ulEl = document.getElementById("ul-el")
 
-console.log(inputEl)
-console.log(buttonEl)
-console.log(ulEl)
-
-buttonEl.addEventListener("click", (e) => {
-    e.preventDefault();
-    const listItem = document.createElement("li")
-    const todoText = inputEl.value;
+buttonEl.addEventListener("click", function () {
+    const newList = document.createElement("li")
+    const todoText = inputField.value.trim();
     const textNode = document.createTextNode(todoText);
-    listItem.appendChild(textNode);
-    
+    newList.appendChild(textNode)
 
-    const checkbox = document.createElement("input");
+    if (todoText === "") {
+        alert("Please enter a task");
+        return;
+    }
+
+    const checkbox = document.createElement("inpuT");
     checkbox.type = "checkbox";
     checkbox.addEventListener("click", () => {
-        listItem.classList.toggle("completed")
+        newList.classList.toggle("completed")
     })
-    listItem.appendChild(checkbox)
+    newList.appendChild(checkbox)
 
     const deleteButton = document.createElement("button")
     deleteButton.textContent = "Delete";
     deleteButton.addEventListener("click", () => {
-        listItem.parentNode.removeChild(listItem)
+        newList.parentNode.removeChild(newList)
     })
 
-    listItem.appendChild(textNode)
-    listItem.appendChild(deleteButton)
-
-    ulEl.appendChild(listItem);
-    inputEl.value = "";
+    newList.appendChild(textNode)
+    newList.appendChild(deleteButton)
+    ulEl.appendChild(newList)
+    inputField.value = "";
 })
-

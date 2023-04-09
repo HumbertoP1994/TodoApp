@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Serif&display=swap');
-$font-libre: 'Libre Baskerville', serif;
-$font-noto: 'Noto Serif', serif;
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Playfair+Display&display=swap');
 
 * {
     margin: 0;
@@ -8,68 +6,109 @@ $font-noto: 'Noto Serif', serif;
     box-sizing: border-box;
 }
 
-body {
-    background: linear-gradient(90deg, #4C83E5, #62D5D0);
-}
-
 html {
     font-size: 20px;
 }
 
-form {
-    margin-top: 20px;
-    margin-left: 20px;
+body {
+    background: linear-gradient(90deg, #00ffff, #212738)
 }
 
 h1 {
-    color: white;
-    font-weight: bold;
-    font-family: $font-libre;
+    color: black;
+    font-family: "Oswald";
+    font-weight: 700;
+    letter-spacing: 0.5rem;
+
     margin-left: 20px;
     margin-top: 20px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid black;
 }
 
-form {
-    position: absolute;
-    bottom: 0;
+.border-container {
+    border-bottom: 2px solid black;
+    width: 60%;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.input-area {
     display: flex;
     flex-direction: row;
-    width: 90%;
-    justify-content: space-between;
-    margin-bottom: 40px;
+    align-items: center;
+    gap: 10px;
+
+    position: absolute;
+    bottom: 0;
+
+    margin-bottom: 20px;
+    margin-left: 20px;
 
     input {
-        height: 30px;
-        color: blue;
-        font-weight: 700;
-        font-family: $font-noto;
-        text-transform: capitalize;
-        width: 70%;
+        height: 40px;
+        width: 250px;
         padding-left: 10px;
-        margin-left: 20px;
+
+        font-family: "Playfair Display";
+        font-weight: 700;
+        color: black;
+
     }
 
     button {
+        height: 40px;
+        width: 50px;
+
+        background-color: #FFC857;
+        border: 1px solid #D1D646;
         display: grid;
         place-content: center;
-        width: 30px;
-        height: 30px;
-        background-color: rgb(247, 166, 247);
-        border: 1px solid black;
-        margin-right: 20px;
+        padding-bottom: 3px;
     }
 
     button:before {
         content: "+";
-        color: white;
-        font-size: 25px;
-        padding-bottom: 25%;
+        font-size: 1.5rem;
+        color: black;
+    }
+}
+
+.container ul {
+
+    margin-top: 20px;
+    margin-left: 20px;
+    list-style-type: none;
+
+    li {
+        font-family: "Playfair Display";
+        font-weight: 700;
+        text-transform: capitalize;
+        margin-top: 5px;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        input {
+            margin-right: 10px;
+        }
+
+        button {
+            margin-left: 10px;
+        }
+    }
+
+    button {
+        background-color: #FFC857;
+        border: 1px solid black;
+
+        font-family: "Playfair Display";
+        font-weight: 700;
+        color: black;
+
     }
 }
 
 .completed {
     text-decoration: line-through;
-    color: #aaa;
+    color: lightgrey;
 }
