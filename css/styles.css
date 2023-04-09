@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Serif&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(90deg, #4C83E5, #62D5D0);
+}
+
+html {
+  font-size: 20px;
+}
+
+form {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+h1 {
+  color: white;
+  font-weight: bold;
+  font-family: "Libre Baskerville", serif;
+  margin-left: 20px;
+  margin-top: 20px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid black;
+}
+
+form {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+form input {
+  height: 30px;
+  color: blue;
+  font-weight: 700;
+  font-family: "Noto Serif", serif;
+  text-transform: capitalize;
+  width: 70%;
+  padding-left: 10px;
+  margin-left: 20px;
+}
+form button {
+  display: grid;
+  place-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(247, 166, 247);
+  border: 1px solid black;
+  margin-right: 20px;
+}
+form button:before {
+  content: "+";
+  color: white;
+  font-size: 25px;
+  padding-bottom: 25%;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #aaa;
+}/*# sourceMappingURL=styles.css.map */
